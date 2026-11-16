@@ -1,0 +1,40 @@
+{
+  "name": "dsh-desktop-control",
+  "version": "0.1.118",
+  "description": "桌面控制 · 插件版：Node 壳（spawn ＋ 工具注册）＋ Python 本体（只靠截图的操作层，不含 OCR/UIA/图标识别）",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "requirements.txt",
+    "worker.py",
+    "desktop_core.py"
+  ],
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2"
+  }
+}

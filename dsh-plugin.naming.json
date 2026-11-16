@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "policy": "dsh-plugin-naming/v1",
+  "plugin": {
+    "namespace": "adccmyk",
+    "name": "desktop-control",
+    "coordinate": "adccmyk/desktop-control",
+    "packageName": "dsh-desktop-control"
+  },
+  "names": {
+    "pluginNames": ["dsh-desktop-control"],
+    "loaderIds": ["dsh-desktop-control"],
+    "services": [],
+    "tools": [
+      "capture_screenshot",
+      "list_windows",
+      "focus_window",
+      "set_window",
+      "get_mouse_position",
+      "mouse_move",
+      "mouse_click",
+      "mouse_drag",
+      "mouse_transfer",
+      "hover",
+      "scroll",
+      "send_keystrokes",
+      "send_shortcut",
+      "open_desktop_item",
+      "wait",
+      "find_click",
+      "sequence"
+    ],
+    "commands": [],
+    "skills": [],
+    "skillProviders": [],
+    "events": [],
+    "settingsNamespaces": [],
+    "routes": [
+      { "kind": "prefix", "path": "/desktop-control/api" }
+    ]
+  }
+}
